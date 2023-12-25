@@ -1,0 +1,134 @@
+<!-- <div *ngFor="let item of items; let i=index"
+class="
+md:w-48 md:h-64 
+sm:w-32 sm:h-52 
+p-2 bg-transparent group perspective"> 
+     <div class="relative preserve-3d w-full h-full  duration-700 "
+     (click)="selected(i)"
+     [ngClass]="{
+         'my-rotate-y-180': item.isSelected
+     }"> ** group-hover:my-rotate-y-180 **
+        <div class="absolute backface-hidden w-full ">
+            <img src="../../../assets/Back - Card.png" class="w-full " alt="" srcset="">
+        </div>
+        <div class="absolute my-rotate-y-180 backface-hidden w-full ">
+            <div>
+                <img src="../../../assets/Basic - {{ item.type | titlecase }}.png" class="w-full h-full" alt="" srcset="">
+                <div class="
+                md:top-2 md:left-10 md:w-20 md:h-3 md:text-[0.6rem]
+                sm:top-1 sm:left-7 dm:w-15 sm:h-2 sm:text-[0.5rem]
+                absolute font-bold ">
+                    <p> {{item.id | number}}-{{ item.name | titlecase }} </p>
+                </div>
+                <div class="
+                md:left-4 md:top-[1.6rem] md:w-36 md:h-24  
+                sm:left-2 sm:top-[1rem] sm:w-24 sm:h-16  
+                absolute flex justify-center items-center  bg-gradient-to-r from-[#AE8625] via-[#F7EF8A] to-[#D2AC47]">
+                    <div class=" absolute h-[92%] w-[93%] flex justify-center items-center  bg-white">
+                        <img src="{{ item.img }}" alt="" class="h-full">
+                    </div>
+                    
+                </div>
+                <div class="
+                md:bottom-9 md:left-4 md:w-36 md:h-20 md:text-[0.6rem]
+                sm:bottom-7 sm:left-2 sm:w-24 sm:h-12 sm:text-[0.5rem]
+                absolute pt-2 font-semibold text-center ">
+                    <p>{{ item.name | titlecase}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> -->
+
+<div class="
+w-24 h-40
+sm:w-32 sm:h-52 
+lg:w-48 lg:h-64 
+p-2 bg-transparent group perspective"> 
+    
+    <div class="relative preserve-3d w-full h-full duration-700"
+        (click)="selected()"
+        [ngClass]="{
+            'my-rotate-y-180': pokemon.isSelected
+        }">  <!--  group-hover:my-rotate-y-180 -->
+        <div class="absolute backface-hidden w-full ">
+            <img src="../../../assets/Back - Card.png" class="w-full " alt="" srcset="">
+        </div>
+        <div class="absolute my-rotate-y-180 backface-hidden w-full ">
+            <div>
+                <img [src]="'../../../assets/Basic - ' + (pokemon.type | titlecase) + '.png'" class="w-full h-full" alt="" srcset="">
+                <div class="
+                hidden
+                sm:block sm:top-1 sm:left-7 dm:w-15 sm:h-2 sm:text-[0.5rem]
+                lg:top-2 lg:left-10 lg:w-20 lg:h-3 lg:text-[0.6rem]
+                absolute font-bold ">
+                    <p> {{ pokemon.id }} - {{ pokemon.name}}  </p>
+                </div>
+                <div class="
+                left-1 top-[0.6rem] w-[4.5rem] h-[3.07rem]
+                sm:left-2 sm:top-[1rem] sm:w-24 sm:h-16  
+                lg:left-4 lg:top-[1.6rem] lg:w-36 lg:h-24  
+                absolute flex justify-center items-center  bg-gradient-to-r from-[#AE8625] via-[#F7EF8A] to-[#D2AC47]">
+                    <div class=" absolute h-[92%] w-[93%] flex justify-center items-center  bg-white">
+                        <!-- <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/25.gif" alt="" class="h-full"> -->
+                        <img [src]='pokemon.img' [alt]='pokemon.name' class="h-full">
+                    </div>
+                    
+                </div>
+                <div class="
+                bottom-9 left-0 w-full h-6 text-[0.4rem]
+                sm:bottom-7 sm:left-2 sm:w-24 sm:h-12 sm:text-[0.5rem]
+                lg:bottom-9 lg:left-4 lg:w-36 lg:h-20 lg:text-lg
+                absolute pt-2 font-semibold text-center ">
+                <p>{{ pokemon.name | titlecase}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+<!-- <div>
+    <div class="w-60">
+        <img src="../../../assets/Basic - Electric.png" class="relative w-full h-full z-0" alt="" srcset="">
+        <div class="h-1/2 w-full bg-black absolute z-10 top-0 left-0">
+    
+        </div>
+    
+    
+    
+        <div>
+            
+            <div class="
+            md:top-2 md:left-10 md:w-20 md:h-3 md:text-[0.6rem]
+            sm:top-1 sm:left-7 dm:w-15 sm:h-2 sm:text-[0.5rem]
+            absolute font-bold ">
+            <p> 10-pokemon</p>
+                
+            </div>
+            <div class="
+            md:left-4 md:top-[1.6rem] md:w-36 md:h-24  
+            sm:left-2 sm:top-[1rem] sm:w-24 sm:h-16  
+            absolute flex justify-center items-center  bg-gradient-to-r from-[#AE8625] via-[#F7EF8A] to-[#D2AC47]">
+                <div class=" absolute h-[92%] w-[93%] flex justify-center items-center  bg-white">
+                    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/25.gif" alt="" class="h-full">
+                </div>
+                
+            </div>
+            <div class="
+            md:bottom-9 md:left-4 md:w-36 md:h-20 md:text-[0.6rem]
+            sm:bottom-7 sm:left-2 sm:w-24 sm:h-12 sm:text-[0.5rem]
+            absolute pt-2 font-semibold text-center ">
+                <p>Pikachu</p>
+            </div>
+        </div>
+    </div>
+</div> -->
+

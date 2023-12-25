@@ -1,0 +1,40 @@
+<div class="
+w-screen h-screen
+absolute top-0 z-20  
+flex flex-col
+justify-center items-center
+bg-slate-600/40">
+    <div class="
+    flex flex-col 
+    w-2/4 lg:w-1/4 
+    h-2/5 
+    p-2 rounded-lg bg-[#0A285F]
+    border-4 border-[#FFCC00]
+    text-sm sm:text-2xl 
+    tracking-widest 
+    font-poke text-[#FFCC00] ">
+        <div class="w-full h-2/5 text-center flex flex-col justify-evenly border-2 border-[#FFCC00] rounded-xl my-2 ">
+            <p class="text-4xl">{{ userName }}</p>
+            <p>Felicidades!! Has Ganado!</p>            
+        </div>
+        <div class="w-full h-2/6 flex flex-col justify-evenly items-center ">
+            <p>Tu tiempo: </p> 
+            <p>{{ time }} segundos</p>
+        </div>
+        <button class="
+        tracking-widest
+        w-32 sm:w-48 
+        self-center text-center
+        border-2 border-[#D5A100] rounded-xl bg-[#0A285F] 
+        flex-1
+        hover:text-[#0075BE]
+        hover:border-[#0A285F]
+        hover:bg-[#FFCC00]
+        transform
+        duration-200
+        " 
+        (click)="endGame()">
+            Finalizar
+        </button>
+    </div>
+</div>
